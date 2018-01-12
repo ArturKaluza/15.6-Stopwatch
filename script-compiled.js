@@ -94,9 +94,7 @@ var Stopwatch = function () {
   }, {
     key: 'resetTime',
     value: function resetTime() {
-      this.times.miliseconds = 0;
-      this.times.seconds = 0;
-      this.times.minutes = 0;
+      this.reset();
       this.display.innerText = this.format(this.times);
     }
   }]);
@@ -134,9 +132,9 @@ addResultButton.addEventListener('click', function () {
   return stopwatch.addResult();
 });
 
-var results = document.querySelector('.results');
-
 var resetTimeButton = document.getElementById('resetTimer');
 resetTimeButton.addEventListener('click', function () {
   return stopwatch.resetTime();
 });
+
+var results = document.querySelector('.results');

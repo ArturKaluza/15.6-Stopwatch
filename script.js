@@ -70,9 +70,7 @@ class Stopwatch {
   }
 
   resetTime () {
-    this.times.miliseconds = 0;
-    this.times.seconds = 0;
-    this.times.minutes = 0;
+    this.reset();
     this.display.innerText = this.format(this.times);   
   }
 }
@@ -99,7 +97,7 @@ resetButton.addEventListener('click', () => stopwatch.resetTable());
 const addResultButton = document.getElementById('record');
 addResultButton.addEventListener('click', () => stopwatch.addResult());
 
-const results = document.querySelector('.results');
-
 const resetTimeButton = document.getElementById('resetTimer');
 resetTimeButton.addEventListener('click', () => stopwatch.resetTime());
+
+const results = document.querySelector('.results');

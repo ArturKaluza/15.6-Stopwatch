@@ -6,15 +6,23 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <nav class="controls">
-      <a href="#" class="button" id="start">Start</a>
-      <a href="#" class="button" id="stop">Stop</a>
-      <button id="resetTimer">reset time</button>
-      <button id="resetTable">reset table</button>
-      <button id="record">add result</button>
-    </nav>
-    <div class="stopwatch"></div>
-    <ul class="results"></ul>
+    <div class="container">
+      <nav class="controls">
+        <div class="basic">
+          <button class="button" id="start">Start</button>
+          <button class="button" id="stop">Stop</button>
+        </div>
+        <div class="watch">
+          <div class="stopwatch"></div>
+          <button class="button" id="record">Add result</button>
+        </div>
+        <div class="tableControl">
+          <button class="button" id="resetTimer" >Reset time</button>
+          <button class="button" id="resetTable" >Reset table</button>
+        </div>
+      </nav>
+      <ol class="results"></ol>
+    </div>
     <script type="text/javascript" src="script-compiled.js"></script>
   </body>
 </html>
